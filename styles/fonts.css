@@ -1,5 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;600;800;900&display=swap);
-
+@import "../assets/fonts/Kinetika/stylesheet.css";
 body {
-  font-family: "Roboto", sans-serif;
-}
+  font-family: "Kinetika", sans-serif;
+}/*# sourceMappingURL=fonts.css.map */

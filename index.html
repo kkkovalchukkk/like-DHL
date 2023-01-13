@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./styles/index.css" />
     <title>FASTWWD | Транспортировка | Логистика</title>
   </head>
@@ -13,38 +14,611 @@
       <div class="top-header">
         <div class="wrapper">
           <a href="/" class="logo-link">
-            <div class="logo">
-		<svg id="logo"
-		 width="80px" height="68px" ><g transform="scale(2.2447318948343) translate(0, 0)"><g>
-	<path fill="#f24c21" d="M6.163,0.84C7.423,0.275,8.81,0,10.242,0c1.073,0,2.109,0.173,3.1,0.515
-		c0.986,0.34,1.916,0.847,2.781,1.516c0.435,0.336,0.848,0.708,1.237,1.115c0.146,0.152,0.289,0.309,0.427,0.469
-		c0.138-0.161,0.281-0.317,0.427-0.47c0.389-0.406,0.802-0.779,1.237-1.115c0.865-0.669,1.796-1.176,2.781-1.516
-		C23.223,0.173,24.259,0,25.332,0c1.432,0,2.812,0.29,4.078,0.841c1.265,0.55,2.41,1.362,3.375,2.408
-		c0.946,1.026,1.68,2.242,2.178,3.581c3.578,9.628-7.744,25.816-17.834,23.13c-1.9-0.506-5.398-2.879-4.287-6.336
-		c0.191-0.596,0.433-1.056,0.641-1.258l0.601-0.479c0.218-0.174,0.322-0.386,0.315-0.638l-0.057-1.165
-		c-0.008-0.252,0.097-0.465,0.314-0.637l2.871-2.29c0.099-0.079,0.191-0.104,0.277-0.076c0.087,0.028,0.142,0.097,0.166,0.208
-		l2.589,6.89c0.044,0.095,0.108,0.155,0.194,0.184c0.088,0.028,0.17,0.011,0.248-0.053c2.706-2.157,0.759-5.604,0.199-9.646
-		c-0.043-0.256,0.045-0.471,0.262-0.644c6.874-5.481,5.217-8.13-1.936-2.427c-0.217,0.173-0.445,0.21-0.685,0.112
-		c-3.816-1.445-6.743-4.111-9.448-1.955c-0.079,0.063-0.115,0.14-0.107,0.23s0.053,0.168,0.136,0.23l6.14,4.059
-		c0.103,0.047,0.153,0.121,0.151,0.219c-0.002,0.099-0.043,0.179-0.122,0.242l-2.871,2.289c-0.217,0.173-0.448,0.228-0.692,0.165
-		l-1.123-0.315c-0.244-0.063-0.475-0.009-0.692,0.164c-1.052,0.839-2.499,1.118-3.923,0.708C-2.781,15.128-1.344,4.208,6.163,0.84z"
-		/>
-</g>
-</svg>
-            </div>
-            <span class="company-name">
-                FASTWWD
-            </span>
+            <img src="./assets/img/logo/logo.png" alt="FASTWWD" class="logo" />
+            <span class="company-name"> FASTWWD </span>
+            <!-- <img src="./assets/img/logo/Site_Logo/left_big.png" alt="" class="logo" /> -->
           </a>
+
+          <nav class="th-nav">
+            <a href="#" class="th-nav__link">
+              <ion-icon name="help-circle-outline"></ion-icon>
+              Помощь
+            </a>
+            <a href="#" class="th-nav__link">
+              <ion-icon name="person-circle-outline"></ion-icon>
+              Войти
+            </a>
+          </nav>
+          <div class="search-icon">
+            <ion-icon name="search-outline"></ion-icon>
+          </div>
+        </div>
+      </div>
+      <div class="bottom-header">
+        <div class="wrapper">
           <nav class="nav">
             <ul class="nav-list">
               <li class="nav-item">
-                
+                <a href="#" class="nav-link active-link"> Калькулятор </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Отслеживание </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Тарифы </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Для корпоративных клиентов </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> О компании </a>
+              </li>
+              <li class="nav-item">
+                <a href="#" class="nav-link"> Контакты </a>
               </li>
             </ul>
           </nav>
+          <div class="lang-selector">
+            <div class="current-lang">
+              <div class="lang-icon ru-icon"></div>
+              <span class="current-lang-name">Русский</span>
+              <ion-icon name="chevron-down-outline"></ion-icon>
+            </div>
+            <div class="lang-menu">
+              <div class="another-lang active-lang">
+                <div class="lang-icon ru-icon"></div>
+                <span class="another-lang-name">Русский</span>
+              </div>
+              <div class="another-lang">
+                <div class="lang-icon en-icon"></div>
+                <span class="another-lang-name">Английский</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </header>
+    <main class="main">
+      <section class="promo">
+        <div class="wrapper">
+          <div class="calculator">
+            <h3 class="calculator-heading">
+              Рассчитайте стоимость доставки
+              <span class="calculator-heading--brand">прямо сейчас</span>
+            </h3>
+            <form class="calculator-form">
+              <div class="row">
+                <div class="col">
+                  <h4 class="col-heading">Откуда забрать?</h4>
+                  <div class="dropdown" id="from-country-dropdown">
+                    <button class="dropdown__button" type="button">Страна</button>
+                    <ul class="dropdown__list">
+                      <li
+                        class="dropdown__list-item dropdown__list-item_active"
+                        data-value="Российская Федерация">
+                        Российская Федерация
+                      </li>
+                      <li class="dropdown__list-item" data-value="Казахстан">Казахстан</li>
+                      <li class="dropdown__list-item" data-value="США">США</li>
+                    </ul>
+                    <!-- Значение брать отсюда -->
+                    <input
+                      required
+                      class="dropdown__input_hidden"
+                      type="text"
+                      name="select-category"
+                      value=""
+                      id="from-country-input" />
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <div class="dropdown" id="from-city-dropdown">
+                    <button class="dropdown__button" type="button">Город</button>
+                    <ul class="dropdown__list">
+                      <li
+                        class="dropdown__list-item dropdown__list-item_active"
+                        data-value="Екатеринбург">
+                        Екатеринбург
+                      </li>
+                      <li class="dropdown__list-item" data-value="Уфа">Уфа</li>
+                      <li class="dropdown__list-item" data-value="Казань">Казань</li>
+                    </ul>
+                    <!-- Значение брать отсюда -->
+
+                    <input
+                      required
+                      class="dropdown__input_hidden"
+                      type="text"
+                      name="select-category"
+                      value=""
+                      id="from-city-input" />
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </div>
+                </div>
+                <div class="col">
+                  <h4 class="col-heading">Куда доставить?</h4>
+                  <div class="dropdown" id="to-country-dropdown">
+                    <button class="dropdown__button" type="button">Страна</button>
+                    <ul class="dropdown__list">
+                      <li
+                        class="dropdown__list-item dropdown__list-item_active"
+                        data-value="Российская Федерация">
+                        Российская Федерация
+                      </li>
+                      <li class="dropdown__list-item" data-value="Казахстан">Казахстан</li>
+                      <li class="dropdown__list-item" data-value="США">США</li>
+                    </ul>
+                    <!-- Значение брать отсюда -->
+
+                    <input
+                      required
+                      class="dropdown__input_hidden"
+                      type="text"
+                      name="select-category"
+                      value=""
+                      id="to-country-input" />
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </div>
+                  <div class="dropdown" id="to-city-dropdown">
+                    <button class="dropdown__button" type="button">Город</button>
+                    <ul class="dropdown__list">
+                      <li
+                        class="dropdown__list-item dropdown__list-item_active"
+                        data-value="Екатеринбург">
+                        Екатеринбург
+                      </li>
+                      <li class="dropdown__list-item" data-value="Уфа">Уфа</li>
+                      <li class="dropdown__list-item" data-value="Казань">Казань</li>
+                    </ul>
+                    <!-- Значение брать отсюда -->
+
+                    <input
+                      required
+                      class="dropdown__input_hidden"
+                      type="text"
+                      name="select-category"
+                      value=""
+                      id="to-city-input" />
+                    <ion-icon name="chevron-down-outline"></ion-icon>
+                  </div>
+                </div>
+                <div class="col">
+                  <h4 class="col-heading">Тип</h4>
+                  <label class="radio-label">
+                    Груз
+                    <input type="radio" checked value="Груз" name="type" id="cargo-input" />
+                  </label>
+                  <label class="radio-label">
+                    Документы <input value="Документы" type="radio" name="type" id="docs-input" />
+                  </label>
+                </div>
+              </div>
+              <div class="row">
+                <!-- Значение брать отсюда -->
+                <input
+                  type="text"
+                  placeholder="Высота"
+                  id="height-input"
+                  class="input weight-inputs" />
+                <!-- Значение брать отсюда -->
+                <input
+                  type="text"
+                  placeholder="Длина"
+                  id="length-input"
+                  class="input weight-inputs" />
+                <!-- Значение брать отсюда -->
+                <input
+                  type="text"
+                  placeholder="Ширина"
+                  id="width-input"
+                  class="input weight-inputs" />
+                <!-- Значение брать отсюда -->
+                <input
+                  type="text"
+                  placeholder="Вес"
+                  id="weight-input"
+                  class="input weight-inputs" />
+                <!-- Значение брать отсюда -->
+                <input
+                  type="text"
+                  placeholder="Вес"
+                  class="input docs-input hidden"
+                  id="docs-weight-input" />
+              </div>
+              <div class="row">
+                <button type="submit" class="calculator-btn">Рассчитать</button>
+              </div>
+            </form>
+          </div>
+          <div class="results">
+            <h3 class="results-heading">Варианты доставки</h3>
+            <div class="results-list">
+              <div class="result-item">
+                <div class="result-content">
+                  <div class="rank">1</div>
+                  <div class="price-heading">Цена: <span class="price">260 413,22 ₽</span></div>
+                  <div class="date">
+                    <span class="day-numbers"> 16-17</span>
+                    дней
+                  </div>
+                  <div class="where">В пункт выдачи</div>
+                  <div class="question-icon">
+                    <div class="help-icon">
+                      <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                      <svg
+                        enable-background="new 0 0 50 50"
+                        height="50px"
+                        id="Layer_1"
+                        version="1.1"
+                        viewBox="0 0 50 50"
+                        width="50px"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle
+                          cx="25"
+                          cy="25"
+                          fill="none"
+                          r="24"
+                          stroke="#000000"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2" />
+                        <rect fill="none" height="50" width="50" />
+                        <g>
+                          <path
+                            d="M23.533,30.407v-1.47c0-1.436,0.322-2.188,1.075-3.229l2.404-3.3c1.254-1.721,1.684-2.546,1.684-3.766   c0-2.044-1.434-3.335-3.479-3.335c-2.008,0-3.299,1.219-3.729,3.407c-0.036,0.215-0.179,0.323-0.395,0.287l-2.259-0.395   c-0.216-0.036-0.323-0.179-0.288-0.395c0.539-3.443,3.014-5.703,6.744-5.703c3.872,0,6.49,2.546,6.49,6.097   c0,1.722-0.608,2.977-1.828,4.663l-2.403,3.3c-0.717,0.968-0.933,1.47-0.933,2.689v1.147c0,0.215-0.143,0.358-0.358,0.358h-2.367   C23.676,30.766,23.533,30.622,23.533,30.407z M23.354,33.851c0-0.215,0.143-0.358,0.359-0.358h2.726   c0.215,0,0.358,0.144,0.358,0.358v3.084c0,0.216-0.144,0.358-0.358,0.358h-2.726c-0.217,0-0.359-0.143-0.359-0.358V33.851z" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="popup-question">Груз будет доставлен в пункт выдачи</div>
+                  </div>
+                </div>
+                <button class="results-btn">Выбрать</button>
+              </div>
+              <div class="result-item">
+                <div class="result-content">
+                  <div class="rank">2</div>
+                  <div class="price-heading">Цена: <span class="price">260 413,22 ₽</span></div>
+                  <div class="date">
+                    <span class="day-numbers"> 16-17</span>
+                    дней
+                  </div>
+                  <div class="where">В пункт выдачи</div>
+                  <div class="question-icon">
+                    <div class="help-icon">
+                      <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                      <svg
+                        enable-background="new 0 0 50 50"
+                        height="50px"
+                        id="Layer_1"
+                        version="1.1"
+                        viewBox="0 0 50 50"
+                        width="50px"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle
+                          cx="25"
+                          cy="25"
+                          fill="none"
+                          r="24"
+                          stroke="#000000"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2" />
+                        <rect fill="none" height="50" width="50" />
+                        <g>
+                          <path
+                            d="M23.533,30.407v-1.47c0-1.436,0.322-2.188,1.075-3.229l2.404-3.3c1.254-1.721,1.684-2.546,1.684-3.766   c0-2.044-1.434-3.335-3.479-3.335c-2.008,0-3.299,1.219-3.729,3.407c-0.036,0.215-0.179,0.323-0.395,0.287l-2.259-0.395   c-0.216-0.036-0.323-0.179-0.288-0.395c0.539-3.443,3.014-5.703,6.744-5.703c3.872,0,6.49,2.546,6.49,6.097   c0,1.722-0.608,2.977-1.828,4.663l-2.403,3.3c-0.717,0.968-0.933,1.47-0.933,2.689v1.147c0,0.215-0.143,0.358-0.358,0.358h-2.367   C23.676,30.766,23.533,30.622,23.533,30.407z M23.354,33.851c0-0.215,0.143-0.358,0.359-0.358h2.726   c0.215,0,0.358,0.144,0.358,0.358v3.084c0,0.216-0.144,0.358-0.358,0.358h-2.726c-0.217,0-0.359-0.143-0.359-0.358V33.851z" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="popup-question">Груз будет доставлен в пункт выдачи</div>
+                  </div>
+                </div>
+
+                <button class="results-btn">Выбрать</button>
+              </div>
+              <div class="result-item">
+                <div class="result-content">
+                  <div class="rank">3</div>
+                  <div class="price-heading">Цена: <span class="price">160 300,22 ₽</span></div>
+                  <div class="date">
+                    <span class="day-numbers"> 22-24</span>
+                    дней
+                  </div>
+                  <div class="where">Курьером</div>
+                  <div class="question-icon">
+                    <div class="help-icon">
+                      <?xml version="1.0" ?><!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 1.1//EN' 'http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd'>
+                      <svg
+                        enable-background="new 0 0 50 50"
+                        height="50px"
+                        id="Layer_1"
+                        version="1.1"
+                        viewBox="0 0 50 50"
+                        width="50px"
+                        xml:space="preserve"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink">
+                        <circle
+                          cx="25"
+                          cy="25"
+                          fill="none"
+                          r="24"
+                          stroke="#000000"
+                          stroke-linecap="round"
+                          stroke-miterlimit="10"
+                          stroke-width="2" />
+                        <rect fill="none" height="50" width="50" />
+                        <g>
+                          <path
+                            d="M23.533,30.407v-1.47c0-1.436,0.322-2.188,1.075-3.229l2.404-3.3c1.254-1.721,1.684-2.546,1.684-3.766   c0-2.044-1.434-3.335-3.479-3.335c-2.008,0-3.299,1.219-3.729,3.407c-0.036,0.215-0.179,0.323-0.395,0.287l-2.259-0.395   c-0.216-0.036-0.323-0.179-0.288-0.395c0.539-3.443,3.014-5.703,6.744-5.703c3.872,0,6.49,2.546,6.49,6.097   c0,1.722-0.608,2.977-1.828,4.663l-2.403,3.3c-0.717,0.968-0.933,1.47-0.933,2.689v1.147c0,0.215-0.143,0.358-0.358,0.358h-2.367   C23.676,30.766,23.533,30.622,23.533,30.407z M23.354,33.851c0-0.215,0.143-0.358,0.359-0.358h2.726   c0.215,0,0.358,0.144,0.358,0.358v3.084c0,0.216-0.144,0.358-0.358,0.358h-2.726c-0.217,0-0.359-0.143-0.359-0.358V33.851z" />
+                        </g>
+                      </svg>
+                    </div>
+                    <div class="popup-question">Груз будет доставлен курьером</div>
+                  </div>
+                </div>
+                <button class="results-btn">Выбрать</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="offers">
+        <div class="wrapper">
+          <h2 class="subheading">Наши услуги</h2>
+          <div class="offers-list">
+            <div class="offer-item">
+              <img
+                src="https://www.trajectus.ru/images/cms/content/kerch_3.jpg"
+                alt=""
+                class="offer-img" />
+              <div class="offer-content">
+                <h4 class="offer-heading">Перевозки водным транспортом</h4>
+                <p class="offer-text">
+                  The sea freight service has grown conside rably in recent years. We spend
+                  timetting to know your processes to.
+                </p>
+              </div>
+            </div>
+            <div class="offer-item">
+              <img
+                src="https://igl-grp.com/wp-content/uploads/2020/06/avia_perevozki_3.jpg"
+                alt=""
+                class="offer-img" />
+              <div class="offer-content">
+                <h4 class="offer-heading">Авиаперевозки</h4>
+                <p class="offer-text">
+                  The sea freight service has grown conside rably in recent years. We spend
+                  timetting to know your processes to.
+                </p>
+              </div>
+            </div>
+            <div class="offer-item">
+              <img
+                src="https://tramis.ru/public/media/images/tmpphpJ4q4Rv15894544425ebd266a203af.jpg"
+                alt=""
+                class="offer-img" />
+              <div class="offer-content">
+                <h4 class="offer-heading">Автоперевозки</h4>
+                <p class="offer-text">
+                  The sea freight service has grown conside rably in recent years. We spend
+                  timetting to know your processes to.
+                </p>
+              </div>
+            </div>
+            <div class="offer-item">
+              <img
+                src="https://www.trajectus.ru/images/cms/content/kerch_3.jpg"
+                alt=""
+                class="offer-img" />
+              <div class="offer-content">
+                <h4 class="offer-heading">Перевозки водным транспортом</h4>
+                <p class="offer-text">
+                  The sea freight service has grown conside rably in recent years. We spend
+                  timetting to know your processes to.
+                </p>
+              </div>
+            </div>
+            <div class="offer-item">
+              <img
+                src="https://igl-grp.com/wp-content/uploads/2020/06/avia_perevozki_3.jpg"
+                alt=""
+                class="offer-img" />
+              <div class="offer-content">
+                <h4 class="offer-heading">Авиаперевозки</h4>
+                <p class="offer-text">
+                  The sea freight service has grown conside rably in recent years. We spend
+                  timetting to know your processes to.
+                </p>
+              </div>
+            </div>
+            <div class="offer-item">
+              <img
+                src="https://tramis.ru/public/media/images/tmpphpJ4q4Rv15894544425ebd266a203af.jpg"
+                alt=""
+                class="offer-img" />
+              <div class="offer-content">
+                <h4 class="offer-heading">Автоперевозки</h4>
+                <p class="offer-text">
+                  The sea freight service has grown conside rably in recent years. We spend
+                  timetting to know your processes to.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="special">
+        <div class="wrapper">
+          <div class="special-list">
+            <div class="special-item">
+              <div class="special-icon">
+                <ion-icon name="time-outline"></ion-icon>
+              </div>
+              <h4 class="special-heading">Скорость доставки</h4>
+              <p class="special-text">Доставим ваш груз в максимально сжатые сроки</p>
+            </div>
+            <div class="special-item">
+              <div class="special-icon">
+                <ion-icon name="shield-checkmark-outline"></ion-icon>
+              </div>
+              <h4 class="special-heading">Безопасность</h4>
+              <p class="special-text">Доставим груз «из рук в руки» быстро и надежно</p>
+            </div>
+            <div class="special-item">
+              <div class="special-icon">
+                <ion-icon name="people-outline"></ion-icon>
+              </div>
+              <h4 class="special-heading">Команда</h4>
+              <p class="special-text">
+                Каждый сотрудник компании является международным сертифицированным специалистом
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="wrapper">
+          <h2 class="subheading">О компании</h2>
+          <div class="text-content">
+            <p class="text">
+              Экспресс-доставка – особое направление среди огромного спектра
+              транспортно-логистических услуг. В отличие от работы компаний, акцентирующих свое
+              внимание на транспортировке сборных и крупногабаритных грузов, служба
+              экспресс-доставки в первую очередь уделяет внимание минимизации сроков перевозки.
+              Достигается это за счет четкого выстраивания маршрутов доставки.
+            </p>
+            <p class="text">
+              Чаще всего службы доставки транспортируют документы и небольшие грузы. Среди клиентов
+              могут быть и частные лица, и крупные компании. Если вам необходимо срочно доставить
+              груз, курьерская служба поможет решить эту задачу.
+            </p>
+            <p class="text">
+              Наша компания – одна из компаний лидеров рынка, завоевавшая признание как среди
+              российских, так и среди зарубежных клиентов. Огромный опыт работы в сфере
+              экспресс-доставки позволил нам организовать по-настоящему современную и технологичную
+              службу, ориентированную на оказание полного спектра услуг. Мы готовы отправить груз из
+              России в более чем 220 стран мира.
+            </p>
+            <p class="text">
+              Срочная доставка – основной приоритет нашей компании. Мы имеем развитую
+              инфраструктурную сеть во всех регионах России и в 220 странах и территориях мира.
+              Доставка грузов занимает от одного до нескольких рабочих дней (в зависимости от
+              дальности расстояния). Мы гарантируем сохранность груза и своевременность выполнения
+              заказа.
+            </p>
+            <p class="text">Служба доставки Express работает по следующей схеме:</p>
+            <ul class="text-list">
+              <li class="text-item">
+                Вы формируете свой заказ с указанием параметров груза, а также адресов отправителя и
+                получателя;
+              </li>
+              <li class="text-item">
+                Вы формируете свой заказ с указанием параметров груза, а также адресов отправителя и
+                получателя;
+              </li>
+              <li class="text-item">
+                Вы формируете свой заказ с указанием параметров груза, а также адресов отправителя и
+                получателя;
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="top-footer">
+        <div class="wrapper">
+          <a href="/" class="logo-link">
+            <img src="./assets/img/logo/logo.png" alt="FASTWWD" class="logo" />
+            <span class="company-name"> FASTWWD </span>
+            <!-- <img src="./assets/img/logo/Site_Logo/left_big.png" alt="" class="logo" /> -->
+          </a>
+          <a href="tel:7999999999" class="tel-link">+7 (999) 999 99-99</a>
+        </div>
+      </div>
+      <div class="bottom-footer">
+        <div class="wrapper">
+          <div class="col">
+            <h5 class="col-heading">Навигация</h5>
+            <nav class="footer-nav">
+              <a href="#" class="nav-link">Калькулятор</a>
+              <a href="#" class="nav-link">Отслеживание</a>
+              <a href="#" class="nav-link">Тарифы</a>
+              <a href="#" class="nav-link">Для корпоративных решений</a>
+              <a href="#" class="nav-link">О компании</a>
+              <a href="#" class="nav-link">Контакты</a>
+            </nav>
+          </div>
+          <div class="col contacts-col">
+            <h5 class="col-heading">Контакты</h5>
+            <div class="row">
+              <div class="socials">
+                <a href="#" class="social-link">
+                  <div class="vk-icon">
+                    <ion-icon name="logo-vk"></ion-icon>
+                  </div>
+                </a>
+                <a href="#" class="social-link">
+                  <div class="wh-icon">
+                    <ion-icon name="logo-whatsapp"></ion-icon>
+                  </div>
+                </a>
+                <a href="#" class="social-link">
+                  <div class="yt-icon">
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </div>
+                </a>
+                <a href="#" class="social-link">
+                  <div class="fb-icon">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <form class="newsletter-form">
+              <input
+                type="text"
+                placeholder="Введите email"
+                class="newsletter-form-input"
+                required />
+              <button type="submit">
+                <ion-icon name="mail-outline"></ion-icon>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyrights">
+        <div class="wrapper">Copyright © 2023 All rights reserved</div>
+      </div>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./scripts/dropdownMenu.js"></script>
+    <script src="./scripts/calculator.js"></script>
+    <script>
+      const swiper = new Swiper(".swiper", {
+        // Optional parameters
+        slidesPerView: 3,
+        direction: "horizontal",
+        loop: true,
+        spaceBetween: 40,
+
+        pagination: {
+          el: ".swiper-pagination",
+        },
+
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+    </script>
   </body>
 </html>
