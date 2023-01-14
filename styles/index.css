@@ -59,8 +59,19 @@ body {
   background-color: #f0f4fe;
 }
 
+.fixed-header {
+  position: fixed;
+  z-index: 999;
+  -webkit-backdrop-filter: blur(100px);
+          backdrop-filter: blur(100px);
+  left: 0;
+  top: 0;
+  height: 60px !important;
+  border-bottom: 1px solid rgba(18, 19, 18, 0.2);
+}
+
 .header {
-  background-color: #ffffff;
+  background-color: #ffcc00;
 }
 .header .wrapper {
   flex-direction: row;
@@ -69,7 +80,7 @@ body {
 .header .top-header {
   width: 100%;
   height: 78px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(18, 18, 18, 0.15);
 }
 .header .top-header .th-nav {
   margin-left: auto;
@@ -126,7 +137,7 @@ body {
   transform: scaleY(1.8);
 }
 .header .bottom-header .nav .nav-list .nav-item .nav-link.active-link::after {
-  background-color: #f24c21;
+  background-color: #121212;
 }
 .header .bottom-header .nav .nav-list .nav-item .nav-link {
   display: flex;
@@ -148,7 +159,7 @@ body {
   transition: background-color 0.13s ease;
 }
 .header .bottom-header .nav .nav-list .nav-item .nav-link:hover::after {
-  background-color: #f24c21;
+  background-color: #121212;
 }
 
 .logo-link {
@@ -158,10 +169,11 @@ body {
 }
 .logo-link .logo {
   width: 50px;
+  filter: brightness(0);
 }
 .logo-link .company-name {
   box-sizing: border-box;
-  color: #f24c21;
+  color: #121212;
   font-size: 2rem;
   font-weight: 700;
   line-height: 100%;
@@ -208,12 +220,11 @@ body {
 }
 .lang-selector .lang-menu {
   z-index: 5;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
   width: 100%;
   position: absolute;
   left: 0px;
   top: 100%;
-  background-color: #fff;
+  background-color: #debe3d;
   display: none;
   flex-direction: column;
   align-items: flex-start;
@@ -227,8 +238,8 @@ body {
   transition: background-color 0.13s ease;
 }
 .lang-selector .lang-menu .another-lang:hover {
-  color: #fff;
-  background-color: #f24c21;
+  color: #121312;
+  background-color: #ffcc00;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.4);
 }
 .lang-selector .lang-menu .another-lang .another-lang-name {
@@ -236,7 +247,8 @@ body {
   display: flex;
 }
 .lang-selector .active-lang {
-  background-color: rgba(242, 76, 33, 0.8);
+  background-color: #f24c21;
+  background-color: rgba(18, 19, 18, 0.8);
   transition: box-shadow 0.13s ease;
   color: #fff;
   font-weight: 500;
@@ -281,7 +293,7 @@ body {
   position: absolute;
   right: 0;
   top: 0;
-  background: linear-gradient(213deg, rgba(242, 75, 33, 0.63) 0%, rgba(62, 36, 36, 0) 100%);
+  background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #ffcc00 100%);
 }
 .promo::before {
   content: "";
@@ -290,7 +302,7 @@ body {
   position: absolute;
   left: 0;
   bottom: 0;
-  background: linear-gradient(30deg, rgba(33, 71, 242, 0.568) 0%, rgba(62, 36, 36, 0) 100%);
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0) 20%, rgb(255, 204, 0) 100%);
 }
 
 .calculator {
@@ -326,16 +338,20 @@ body {
 .calculator .calculator-form .calculator-btn {
   width: 100%;
   padding: 20px 0;
-  background-color: #f24c21;
-  color: #fff;
+  background-color: #ffcc00;
+  color: #121212;
+  font-size: 0.8rem;
+  font-weight: 700;
+  line-height: 100%;
+  text-transform: uppercase;
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: transform 0.13s;
+  transition: transform 0.13s, background-color 0.13s;
 }
 .calculator .calculator-form .calculator-btn:hover {
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background-color: transparent;
+  outline: 1px solid #ffcc00;
 }
 .calculator .calculator-form .calculator-btn:active {
   transform: translateY(2px);
@@ -517,6 +533,7 @@ body {
   border-radius: 15px;
   padding: 20px;
   display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
 }
@@ -641,19 +658,13 @@ section {
   width: 100%;
   height: 650px;
 }
-.offers .swiper .swiper-slide {
-  transition: transform 0.13s;
-}
-.offers .swiper .swiper-slide:hover {
-  transform: scale(0.95);
-}
 .offers .swiper .swiper-pagination * {
-  background-color: #f24c21;
+  background-color: #121212;
 }
 .offers .swiper .swiper-button-prev,
 .offers .swiper .swiper-button-next {
   color: #fff;
-  background-color: #f24c21;
+  background-color: #121312;
   width: 40px;
   height: 40px;
   display: flex;
@@ -743,7 +754,7 @@ section {
 .special {
   width: 100%;
   height: 350px;
-  background-color: #f24c21;
+  background-color: #121212;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4) inset;
 }
 .special .wrapper {
@@ -805,7 +816,7 @@ section {
   content: "";
   width: 10px;
   height: 10px;
-  background-color: #f24c21;
+  background-color: #ffcc00;
   border-radius: 50%;
   position: absolute;
   left: -20px;
@@ -821,15 +832,21 @@ section {
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 2px solid rgba(242, 76, 33, 0.2);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.5);
   padding-bottom: 20px;
 }
 .footer .top-footer .wrapper .logo-link {
   padding-right: 20px;
-  border-right: 2px solid rgba(242, 76, 33, 0.2);
+  border-right: 2px solid rgba(255, 255, 255, 0.5);
+}
+.footer .top-footer .wrapper .logo-link .logo {
+  filter: brightness(300);
+}
+.footer .top-footer .wrapper .logo-link .company-name {
+  color: #fff;
 }
 .footer .top-footer .wrapper .tel-link {
-  color: #f24c21;
+  color: #fff;
   font-size: 18px;
 }
 .footer .bottom-footer .wrapper {
@@ -848,7 +865,7 @@ section {
   font-size: 16px;
   color: #fff;
   padding-bottom: 10px;
-  border-bottom: 1px solid #f24c21;
+  border-bottom: 1px solid #ffcc00;
 }
 .footer .bottom-footer .wrapper .col .footer-nav {
   display: flex;
@@ -862,7 +879,7 @@ section {
   transition: color 0.13s;
 }
 .footer .bottom-footer .wrapper .col .footer-nav .nav-link:hover {
-  color: #fff;
+  color: #ffcc00;
 }
 .footer .bottom-footer .wrapper .col .socials {
   width: 100%;
@@ -878,7 +895,7 @@ section {
   transition: color 0.13s, transform 0.13s;
 }
 .footer .bottom-footer .wrapper .col .socials .md:hover {
-  color: #f24c21;
+  color: #ffcc00;
 }
 .footer .bottom-footer .wrapper .col .socials .md:active {
   transform: translateY(2px);
@@ -918,7 +935,7 @@ section {
   border: none;
   width: 40px;
   height: 40px;
-  background: #f24c21;
+  background: #ffcc00;
   transition: transform 0.13s;
   cursor: pointer;
 }
