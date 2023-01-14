@@ -85,6 +85,9 @@ body {
         // text-transform: uppercase;
         font-size: 0.8rem;
         font-weight: 500;
+        &:hover {
+          text-decoration: underline;
+        }
         .md {
           width: 20px;
           height: 20px;
@@ -1001,6 +1004,118 @@ section {
       width: 20px;
       height: 20px;
       color: #fff;
+    }
+  }
+}
+
+// Sign In Page
+
+@import "./sign-in.scss";
+
+.cabinet-header {
+  .th-nav {
+    &__link:hover {
+      text-decoration: underline;
+    }
+    .home-icon {
+      .md {
+        width: 10px;
+        height: 10px;
+      }
+    }
+  }
+}
+
+.cabinet {
+  margin-top: 40px;
+  .wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .profile {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    align-self: end;
+    .avatar {
+      .md {
+        width: 50px;
+        height: 50px;
+      }
+      .avatar-img {
+        width: 40px;
+        height: 40px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+      }
+    }
+    .name {
+      font-weight: 500;
+      color: #131213;
+      font-size: 12px;
+      text-transform: uppercase;
+      text-decoration: underline;
+    }
+  }
+  .menu {
+    margin: 30px 0px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    &__btn {
+      padding: 6px 15px;
+      background-color: $yellow;
+      border-radius: 10px;
+      font-weight: 500;
+      font-size: 13px;
+      line-height: 100%;
+      cursor: pointer;
+      transition: color 0.13s, background-color 0.13s, transform 0.13s;
+      &:hover {
+        background-color: #121312;
+        color: #fff;
+      }
+      &:active {
+        transform: translateY(2px);
+      }
+    }
+  }
+  .table {
+    .row:nth-child(even) {
+      background-color: rgba($color: $yellow, $alpha: 0.09);
+    }
+    .row {
+      width: 100%;
+      display: flex;
+      align-items: center;
+    }
+    width: 100%;
+    .thead {
+      width: 100%;
+      background-color: rgba($color: $yellow, $alpha: 0.3);
+      border-bottom: 4px solid #131213;
+    }
+
+    .td {
+      width: 128px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+      font-weight: 500;
+      outline: 1px solid $yellow;
+      text-align: center;
+      &:hover {
+        background-color: rgba($color: $yellow, $alpha: 0.2);
+      }
+      .show-more-link {
+        text-decoration: underline;
+      }
     }
   }
 }

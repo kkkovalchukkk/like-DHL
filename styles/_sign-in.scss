@@ -1,0 +1,103 @@
+.sign-in-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  .sign-in-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    filter: brightness(0);
+  }
+  .back-link {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 12px;
+    transition: color 0.13s;
+    &:hover {
+      color: $yellow;
+      .md {
+        color: $yellow;
+      }
+    }
+    .md {
+      transition: color 0.13s;
+      transform: translateY(1px);
+    }
+  }
+}
+
+.sign-in-form {
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+  .form-content {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 60px;
+    .input {
+      width: 100%;
+      padding: 8px 15px;
+      border: none;
+      background: none;
+      border-bottom: 1px solid #12131263;
+      transition: border-color 0.13s;
+      font-size: 12px;
+      font-weight: 500;
+      color: #121312;
+      &:focus {
+        outline: none;
+        border-color: $yellow;
+      }
+    }
+  }
+  .label {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    font-size: 14px;
+    font-weight: 500;
+  }
+  .sign-in-btn {
+    width: 100%;
+    background-color: $yellow;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    color: #131213;
+    cursor: pointer;
+    transition: background-color 0.13s;
+    &:hover {
+      background-color: transparent;
+      outline: 1px solid $yellow;
+    }
+  }
+  .sign-in-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .sign-up-link,
+    .forgot-link {
+      font-size: 13px;
+      transition: color 0.13s;
+      color: rgba($color: #121212, $alpha: 0.5);
+      &:hover {
+        color: #131213;
+      }
+    }
+  }
+}

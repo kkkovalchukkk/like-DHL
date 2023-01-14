@@ -123,6 +123,9 @@ body {
   font-size: 0.8rem;
   font-weight: 500;
 }
+.header .top-header .th-nav .th-nav__link:hover {
+  text-decoration: underline;
+}
 .header .top-header .th-nav .th-nav__link .md {
   width: 20px;
   height: 20px;
@@ -999,4 +1002,208 @@ section {
   width: 20px;
   height: 20px;
   color: #fff;
+}
+
+.sign-in-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+}
+.sign-in-container .sign-in-logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  filter: brightness(0);
+}
+.sign-in-container .back-link {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  transition: color 0.13s;
+}
+.sign-in-container .back-link:hover {
+  color: #ffcc00;
+}
+.sign-in-container .back-link:hover .md {
+  color: #ffcc00;
+}
+.sign-in-container .back-link .md {
+  transition: color 0.13s;
+  transform: translateY(1px);
+}
+
+.sign-in-form {
+  display: flex;
+  align-items: center;
+  gap: 20rem;
+}
+.sign-in-form .form-content {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 60px;
+}
+.sign-in-form .form-content .input {
+  width: 100%;
+  padding: 8px 15px;
+  border: none;
+  background: none;
+  border-bottom: 1px solid rgba(18, 19, 18, 0.3882352941);
+  transition: border-color 0.13s;
+  font-size: 12px;
+  font-weight: 500;
+  color: #121312;
+}
+.sign-in-form .form-content .input:focus {
+  outline: none;
+  border-color: #ffcc00;
+}
+.sign-in-form .label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.sign-in-form .sign-in-btn {
+  width: 100%;
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 10px;
+  color: #131213;
+  cursor: pointer;
+  transition: background-color 0.13s;
+}
+.sign-in-form .sign-in-btn:hover {
+  background-color: transparent;
+  outline: 1px solid #ffcc00;
+}
+.sign-in-form .sign-in-menu {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.sign-in-form .sign-in-menu .sign-up-link,
+.sign-in-form .sign-in-menu .forgot-link {
+  font-size: 13px;
+  transition: color 0.13s;
+  color: rgba(18, 18, 18, 0.5);
+}
+.sign-in-form .sign-in-menu .sign-up-link:hover,
+.sign-in-form .sign-in-menu .forgot-link:hover {
+  color: #131213;
+}
+
+.cabinet-header .th-nav__link:hover {
+  text-decoration: underline;
+}
+.cabinet-header .th-nav .home-icon .md {
+  width: 10px;
+  height: 10px;
+}
+
+.cabinet {
+  margin-top: 40px;
+}
+.cabinet .wrapper {
+  flex-direction: column;
+  align-items: flex-start;
+}
+.cabinet .profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  align-self: end;
+}
+.cabinet .profile .avatar .md {
+  width: 50px;
+  height: 50px;
+}
+.cabinet .profile .avatar .avatar-img {
+  width: 40px;
+  height: 40px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+}
+.cabinet .profile .name {
+  font-weight: 500;
+  color: #131213;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+.cabinet .menu {
+  margin: 30px 0px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+.cabinet .menu__btn {
+  padding: 6px 15px;
+  background-color: #ffcc00;
+  border-radius: 10px;
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 100%;
+  cursor: pointer;
+  transition: color 0.13s, background-color 0.13s, transform 0.13s;
+}
+.cabinet .menu__btn:hover {
+  background-color: #121312;
+  color: #fff;
+}
+.cabinet .menu__btn:active {
+  transform: translateY(2px);
+}
+.cabinet .table {
+  width: 100%;
+}
+.cabinet .table .row:nth-child(even) {
+  background-color: rgba(255, 204, 0, 0.09);
+}
+.cabinet .table .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.cabinet .table .thead {
+  width: 100%;
+  background-color: rgba(255, 204, 0, 0.3);
+  border-bottom: 4px solid #131213;
+}
+.cabinet .table .td {
+  width: 128px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 500;
+  outline: 1px solid #ffcc00;
+  text-align: center;
+}
+.cabinet .table .td:hover {
+  background-color: rgba(255, 204, 0, 0.2);
+}
+.cabinet .table .td .show-more-link {
+  text-decoration: underline;
 }/*# sourceMappingURL=index.css.map */
