@@ -64,12 +64,12 @@
               <span class="current-lang-name">Русский</span>
               <ion-icon name="chevron-down-outline"></ion-icon>
             </div>
-            <div class="lang-menu">
-              <div class="another-lang active-lang">
+            <div class="lang-menu" data-google-lang="ru">
+              <div class="another-lang ru-another-lang active-lang">
                 <div class="lang-icon ru-icon"></div>
                 <span class="another-lang-name">Русский</span>
               </div>
-              <div class="another-lang">
+              <div class="another-lang en-another-lang" data-google-lang="en">
                 <div class="lang-icon en-icon"></div>
                 <span class="another-lang-name">Английский</span>
               </div>
@@ -273,7 +273,7 @@
                     <div class="popup-question">Груз будет доставлен в пункт выдачи</div>
                   </div>
                 </div>
-                <button class="results-btn">Выбрать</button>
+                <a href="#" class="results-btn">Выбрать</a>
               </div>
               <div class="result-item">
                 <div class="result-content">
@@ -317,7 +317,7 @@
                   </div>
                 </div>
 
-                <button class="results-btn">Выбрать</button>
+                <a href="#" class="results-btn">Выбрать</a>
               </div>
               <div class="result-item">
                 <div class="result-content">
@@ -360,7 +360,7 @@
                     <div class="popup-question">Груз будет доставлен курьером</div>
                   </div>
                 </div>
-                <button class="results-btn">Выбрать</button>
+                <a href="#" class="results-btn">Выбрать</a>
               </div>
             </div>
           </div>
@@ -369,7 +369,8 @@
       <section class="offers">
         <div class="wrapper">
           <h2 class="subheading">Наши услуги</h2>
-          <div class="offers-list">
+
+          <!-- <div class="offers-list">
             <div class="offer-item">
               <img
                 src="https://www.trajectus.ru/images/cms/content/kerch_3.jpg"
@@ -446,9 +447,66 @@
                   The sea freight service has grown conside rably in recent years. We spend
                   timetting to know your processes to.
                 </p>
+              </div>
+            </div>
+          </div> -->
+        </div>
+        <div class="swiper">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <img
+                  src="https://tramis.ru/public/media/images/tmpphpJ4q4Rv15894544425ebd266a203af.jpg"
+                  alt=""
+                  class="swiper-img" />
+                <div class="swiper-card-content">
+                  <h4 class="swiper-card-heading">Автоперевозки</h4>
+                  <p class="swiper-card-text">
+                    The sea freight service has grown conside rably in recent years. We spend
+                    timetting to know your processes to.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <img
+                  src="https://www.trajectus.ru/images/cms/content/kerch_3.jpg"
+                  alt=""
+                  class="swiper-img" />
+                <div class="swiper-card-content">
+                  <h4 class="swiper-card-heading">Перевозки водным транспортом</h4>
+                  <p class="swiper-card-text">
+                    The sea freight service has grown conside rably in recent years. We spend
+                    timetting to know your processes to.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="swiper-card">
+                <img
+                  src="https://igl-grp.com/wp-content/uploads/2020/06/avia_perevozki_3.jpg"
+                  alt=""
+                  class="swiper-img" />
+                <div class="swiper-card-content">
+                  <h4 class="swiper-card-heading">Авиаперевозки</h4>
+                  <p class="swiper-card-text">
+                    The sea freight service has grown conside rably in recent years. We spend
+                    timetting to know your processes to.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+          <!-- If we need pagination -->
+          <div class="swiper-pagination"></div>
+
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+          <!-- If we need navigation buttons -->
         </div>
       </section>
       <section class="special">
@@ -599,13 +657,16 @@
     <script
       type="module"
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <script src="//translate.google.com/translate_a/element.js?cb=TranslateInit"></script>
+    <script src="./scripts/translate.js"></script>
     <script src="./scripts/dropdownMenu.js"></script>
     <script src="./scripts/calculator.js"></script>
     <script>
       const swiper = new Swiper(".swiper", {
         // Optional parameters
-        slidesPerView: 3,
+        slidesPerView: 4,
         direction: "horizontal",
         loop: true,
         spaceBetween: 40,

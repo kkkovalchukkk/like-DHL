@@ -5,7 +5,9 @@ $ltBrandColor: rgba(242, 75, 33, 0.226);
 
 @import "./reset.css";
 
-@import "./fonts.css";
+@import "./_fonts.scss";
+
+@import "./_translate.scss";
 
 @import "./index.css";
 
@@ -583,6 +585,7 @@ body {
         color: $brandColor;
         background-color: #fff;
         cursor: pointer;
+        text-align: center;
         &:hover {
           color: #fff;
           background-color: $brandColor;
@@ -615,7 +618,7 @@ section {
 .offers {
   .swiper {
     width: 100%;
-    height: 400px;
+    height: 650px;
     .swiper-slide {
       transition: transform 0.13s;
     }
@@ -629,7 +632,18 @@ section {
     }
     .swiper-button-prev,
     .swiper-button-next {
-      color: $brandColor;
+      color: #fff;
+      background-color: $brandColor;
+      width: 40px;
+      height: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: transform 0.13s;
+      &:active {
+        transform: translateY(2px);
+      }
     }
     .swiper-card {
       width: 100%;
@@ -660,7 +674,7 @@ section {
       }
       .swiper-img {
         width: 100%;
-        height: 240px;
+        height: 31.25rem;
         object-fit: cover;
       }
     }

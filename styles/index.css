@@ -1,6 +1,56 @@
+@charset "UTF-8";
 @import "./reset.css";
-@import "./fonts.css";
+@import "../assets/fonts/Kinetika/stylesheet.css";
 @import "./index.css";
+body {
+  font-family: "Kinetika", sans-serif;
+}
+
+/* Виджет назначает height: 100% , что может привести к непредксказуемому результату, если вы этого не планровали */
+html {
+  height: auto !important;
+}
+
+/* Фиксируем позицию body, которую меняет панель гугла */
+body {
+  top: 0 !important;
+  position: static !important;
+}
+
+/* Прячем панель гугла */
+.skiptranslate {
+  display: none !important;
+}
+
+/* Убираем подсветку ссылок */
+.goog-text-highlight {
+  background-color: inherit;
+  box-shadow: none;
+  box-sizing: inherit;
+}
+
+/* language */
+.language {
+  position: fixed;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+}
+
+.language__img {
+  margin: 2px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.language__img:hover,
+.language__img_active {
+  opacity: 1;
+}
+
 * {
   box-sizing: border-box;
 }
@@ -560,6 +610,7 @@ body {
   color: #f24c21;
   background-color: #fff;
   cursor: pointer;
+  text-align: center;
 }
 .results .results-list .result-item .results-btn:hover {
   color: #fff;
@@ -588,7 +639,7 @@ section {
 
 .offers .swiper {
   width: 100%;
-  height: 400px;
+  height: 650px;
 }
 .offers .swiper .swiper-slide {
   transition: transform 0.13s;
@@ -601,7 +652,19 @@ section {
 }
 .offers .swiper .swiper-button-prev,
 .offers .swiper .swiper-button-next {
-  color: #f24c21;
+  color: #fff;
+  background-color: #f24c21;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: transform 0.13s;
+}
+.offers .swiper .swiper-button-prev:active,
+.offers .swiper .swiper-button-next:active {
+  transform: translateY(2px);
 }
 .offers .swiper .swiper-card {
   width: 100%;
@@ -631,7 +694,7 @@ section {
 }
 .offers .swiper .swiper-card .swiper-img {
   width: 100%;
-  height: 240px;
+  height: 31.25rem;
   -o-object-fit: cover;
      object-fit: cover;
 }
