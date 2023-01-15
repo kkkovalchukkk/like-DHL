@@ -1,0 +1,36 @@
+.about {
+  .text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2.5rem;
+    .text {
+      font-size: 1rem;
+      font-weight: 500;
+      line-height: 100%;
+    }
+    .text-list {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2.5rem;
+      padding-left: 2.5rem;
+      .text-item {
+        font-size: 1rem;
+        font-style: italic;
+        font-weight: 500;
+        position: relative;
+        &::after {
+          content: "";
+          width: 0.625rem;
+          height: 0.625rem;
+          background-color: $yellow;
+          border-radius: 50%;
+          position: absolute;
+          left: -1.25rem;
+          top: 0.1563rem;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+.offers {
+  .swiper {
+    width: 100%;
+    height: 40.625rem;
+
+    .swiper-pagination {
+      * {
+        background-color: #121212;
+      }
+    }
+    .swiper-pagination-bullet {
+      width: 0.5rem;
+      height: 0.5rem;
+    }
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: #fff;
+      background-color: #121312;
+      width: 2.5rem;
+      height: 2.5rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      transition: transform 0.13s;
+      &::after {
+        font-size: 0.8rem;
+      }
+      &:active {
+        transform: translateY(0.125rem);
+      }
+    }
+    .swiper-card {
+      width: 100%;
+      display: flex;
+      align-items: center;
+
+      flex-direction: column;
+      gap: 0.625rem;
+      text-align: center;
+      backdrop-filter: blur(2.5rem);
+      .swiper-card-content {
+        display: flex;
+        align-items: center;
+
+        flex-direction: column;
+        gap: 0.625rem;
+        padding: 0.3125rem;
+      }
+      .swiper-card-heading {
+        font-size: 1.125rem;
+
+        font-weight: 500;
+      }
+      .swiper-card-text {
+        font-size: 0.875rem;
+        align-self: start;
+        text-align: left;
+      }
+      .swiper-img {
+        width: 100%;
+        height: 31.25rem;
+        object-fit: cover;
+      }
+    }
+  }
+}

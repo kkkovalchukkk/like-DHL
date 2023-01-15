@@ -1,0 +1,20 @@
+.logo-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  // filter: brightness(0.3);
+  .logo {
+    width: 50px;
+    filter: brightness(0);
+  }
+  .company-name {
+    box-sizing: border-box;
+    // color: rgba(40, 39, 37, 0.94);
+    // color: $brandColor;
+    color: #121212;
+    // font-family: Golos, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 100%;
+  }
+}
