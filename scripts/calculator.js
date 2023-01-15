@@ -11,3 +11,12 @@ document.querySelector("#docs-input").addEventListener("input", () => {
   });
   document.querySelector("#docs-weight-input").classList.remove("hidden");
 });
+
+$(".calculator-form").submit((e) => {
+  e.preventDefault();
+  $(".loader").removeClass("hidden-loader");
+  setTimeout(() => {
+    $(".results").removeClass("hidden");
+    $(".loader").addClass("hidden-loader");
+  }, 2000);
+});
