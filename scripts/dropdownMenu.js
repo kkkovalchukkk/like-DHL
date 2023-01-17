@@ -17,6 +17,7 @@ document.querySelectorAll(".dropdown").forEach(function (dropdownWrapper) {
       e.target.classList.add("dropdown__list-item_active");
       dropdownBtn.innerText = this.innerText;
       dropdownInput.value = this.dataset.value;
+      console.log(dropdownInput.value);
       dropdownList.classList.remove("dropdown__list_visible");
     });
   });
@@ -34,4 +35,59 @@ document.querySelectorAll(".dropdown").forEach(function (dropdownWrapper) {
       dropdownList.classList.remove("dropdown__list_visible");
     }
   });
+});
+
+document.querySelector("#cargo-input").addEventListener("input", () => {
+  document.querySelectorAll(".weight-inputs").forEach((input) => {
+    input.dataset.disabled = "false";
+    input.classList.remove("hidden");
+  });
+  document.querySelector("#docs-weight-input").dataset.disabled = "true";
+  document.querySelector("#docs-weight-input").classList.add("hidden");
+});
+
+document.querySelector("#docs-input").addEventListener("input", () => {
+  document.querySelectorAll(".weight-inputs").forEach((input) => {
+    input.dataset.disabled = "true";
+    input.classList.add("hidden");
+  });
+  document.querySelector("#docs-weight-input").dataset.disabled = "false";
+  document.querySelector("#docs-weight-input").classList.remove("hidden");
+});
+
+$(".calculator-form").submit((e) => {
+  e.preventDefault();
+  let flag = true;
+  e.target.querySelectorAll("input[type='text']").forEach((input) => {
+    if (input.dataset.disabled === "true") return false;
+
+    if (!input.value) {
+      flag = false;
+      if (input.closest(".dropdown")) {
+        input.closest(".dropdown").classList.add("error");
+      } else {
+        input.classList.add("error");
+      }
+    } else {
+      if (input.closest(".dropdown")) {
+        input.closest(".dropdown").classList.remove("error");
+      } else {
+        input.classList.remove("error");
+      }
+    }
+  });
+  if (flag) {
+    const data = {};
+    $(".loader").removeClass("hidden-loader");
+    setTimeout(() => {
+      $(".results").removeClass("hidden");
+      $(".loader").addClass("hidden-loader");
+    }, 2000);
+    e.target.querySelectorAll("input").forEach((input) => {
+      data[input.name] = input.value;
+    });
+    console.log(data);
+  } else {
+    return false;
+  }
 });

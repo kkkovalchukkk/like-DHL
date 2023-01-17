@@ -1,4 +1,4 @@
-$wrapper: 1200px;
+$wrapper: 1400px;
 $yellow: #ffcc00;
 $brandColor: #f24c21;
 $ltBrandColor: rgba(242, 75, 33, 0.226);
@@ -96,6 +96,12 @@ section {
   background-color: #fff;
   padding: 1.25rem;
   border-radius: 0.9375rem;
+
+  .error {
+    outline: 1px solid red !important;
+    box-shadow: 1px 1px 5px rgba($color: $brandColor, $alpha: 0.25);
+  }
+
   .calculator-heading {
     max-width: 28.125rem;
     box-sizing: border-box;
@@ -526,5 +532,36 @@ section {
 @media (max-width: 576px) {
   html {
     font-size: 11px;
+  }
+}
+
+@media (max-width: 465px) {
+  .calculator {
+    .calculator-form {
+      width: 100%;
+      .row {
+        gap: 2rem;
+      }
+      .row:first-child {
+        width: 100%;
+        flex-wrap: wrap;
+      }
+      .col {
+        width: 100%;
+        .dropdown {
+          width: 100%;
+          max-width: 100%;
+        }
+      }
+      // .col:not(:last-child) {
+      //   width: 48%;
+      // }
+      // .col:last-child {
+      //   width: 100%;
+      // }
+      .dropdown {
+        width: 100%;
+      }
+    }
   }
 }

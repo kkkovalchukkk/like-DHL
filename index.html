@@ -29,7 +29,7 @@
               Войти
             </a>
           </nav>
-          <form class="search-form">
+          <!-- <form class="search-form">
             <label class="search-label" for="search-input">
               <div class="search-icon">
                 <ion-icon name="search-outline"></ion-icon>
@@ -41,7 +41,7 @@
                 id="search-input"
                 class="search-input" />
             </label>
-          </form>
+          </form> -->
         </div>
       </div>
       <div class="bottom-header">
@@ -113,10 +113,9 @@
                     </ul>
                     <!-- Значение брать отсюда -->
                     <input
-                      required
                       class="dropdown__input_hidden"
                       type="text"
-                      name="select-category"
+                      name="from-county"
                       value=""
                       id="from-country-input" />
                     <ion-icon name="chevron-down-outline"></ion-icon>
@@ -135,10 +134,9 @@
                     <!-- Значение брать отсюда -->
 
                     <input
-                      required
                       class="dropdown__input_hidden"
                       type="text"
-                      name="select-category"
+                      name="from-city"
                       value=""
                       id="from-city-input" />
                     <ion-icon name="chevron-down-outline"></ion-icon>
@@ -160,10 +158,9 @@
                     <!-- Значение брать отсюда -->
 
                     <input
-                      required
                       class="dropdown__input_hidden"
                       type="text"
-                      name="select-category"
+                      name="to-county"
                       value=""
                       id="to-country-input" />
                     <ion-icon name="chevron-down-outline"></ion-icon>
@@ -182,10 +179,9 @@
                     <!-- Значение брать отсюда -->
 
                     <input
-                      required
                       class="dropdown__input_hidden"
                       type="text"
-                      name="select-category"
+                      name="to-city"
                       value=""
                       id="to-city-input" />
                     <ion-icon name="chevron-down-outline"></ion-icon>
@@ -207,12 +203,14 @@
                 <input
                   type="text"
                   placeholder="Высота"
+                  name="height"
                   id="height-input"
                   class="input weight-inputs" />
                 <!-- Значение брать отсюда -->
                 <input
                   type="text"
                   placeholder="Длина"
+                  name="length"
                   id="length-input"
                   class="input weight-inputs" />
                 <!-- Значение брать отсюда -->
@@ -220,26 +218,30 @@
                   type="text"
                   placeholder="Ширина"
                   id="width-input"
+                  name="width"
                   class="input weight-inputs" />
                 <!-- Значение брать отсюда -->
                 <input
                   type="text"
                   placeholder="Вес"
                   id="weight-input"
+                  name="weight"
                   class="input weight-inputs" />
                 <!-- Значение брать отсюда -->
                 <input
                   type="text"
                   placeholder="Вес"
                   class="input docs-input hidden"
-                  id="docs-weight-input" />
+                  id="docs-weight-input"
+                  name="weight"
+                  data-disabled="true" />
               </div>
               <div class="row">
                 <button type="submit" class="calculator-btn">Рассчитать</button>
               </div>
             </form>
           </div>
-          <div class="results">
+          <div class="results hidden">
             <h3 class="results-heading">Варианты доставки</h3>
             <div class="results-list">
               <div class="result-item">
@@ -463,7 +465,7 @@
           </div> -->
         </div>
         <div class="swiper">
-          <!-- Additional required wrapper -->
+          <!-- Additional  wrapper -->
           <div class="swiper-wrapper">
             <!-- Slides -->
             <div class="swiper-slide">
@@ -649,11 +651,7 @@
               </div>
             </div>
             <form class="newsletter-form">
-              <input
-                type="text"
-                placeholder="Введите email"
-                class="newsletter-form-input"
-                required />
+              <input type="text" placeholder="Введите email" class="newsletter-form-input" />
               <button type="submit">
                 <ion-icon name="mail-outline"></ion-icon>
               </button>
