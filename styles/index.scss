@@ -197,6 +197,15 @@ section {
         outline: none;
       }
     }
+    .labels {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+      @media (max-width: 465px) {
+        flex-direction: row;
+      }
+    }
     .radio-label {
       width: 100%;
       justify-content: space-between;

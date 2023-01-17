@@ -8,20 +8,20 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem;
 
   .sign-in-logo {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     filter: brightness(0);
   }
   .back-link {
     display: flex;
     align-items: center;
-    gap: 5px;
-    font-size: 12px;
+    gap: 0.3125rem;
+    font-size: 0.75rem;
     transition: color 0.13s;
     &:hover {
       color: $yellow;
@@ -31,7 +31,7 @@
     }
     .md {
       transition: color 0.13s;
-      transform: translateY(1px);
+      transform: translateY(0.0625rem);
     }
   }
 }
@@ -39,21 +39,28 @@
 .sign-in-form {
   display: flex;
   align-items: center;
-  gap: 20rem;
+
+  width: 100%;
+  max-width: 43.75rem;
+  justify-content: space-between;
+  @media (max-width: 768px) {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
   .form-content {
-    width: 300px;
+    width: 18.75rem;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    gap: 60px;
+    gap: 3.75rem;
     .input {
       width: 100%;
-      padding: 8px 15px;
+      padding: 0.5rem 0.9375rem;
       border: none;
       background: none;
-      border-bottom: 1px solid #12131263;
+      border-bottom: 0.0625rem solid #12131263;
       transition: border-color 0.13s;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 500;
       color: #121312;
       &:focus {
@@ -67,22 +74,22 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 5px;
-    font-size: 14px;
+    gap: 0.3125rem;
+    font-size: 0.875rem;
     font-weight: 500;
   }
   .sign-in-btn {
     width: 100%;
     background-color: $yellow;
     border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
+    padding: 0.625rem 0.9375rem;
+    border-radius: 0.625rem;
     color: #131213;
     cursor: pointer;
     transition: background-color 0.13s;
     &:hover {
       background-color: transparent;
-      outline: 1px solid $yellow;
+      outline: 0.0625rem solid $yellow;
     }
   }
   .sign-in-menu {
@@ -92,7 +99,7 @@
     justify-content: space-between;
     .sign-up-link,
     .forgot-link {
-      font-size: 13px;
+      font-size: 0.8125rem;
       transition: color 0.13s;
       color: rgba($color: #121212, $alpha: 0.5);
       &:hover {

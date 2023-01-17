@@ -504,6 +504,17 @@ section {
 .calculator .calculator-form .select:focus {
   outline: none;
 }
+.calculator .calculator-form .labels {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+}
+@media (max-width: 465px) {
+  .calculator .calculator-form .labels {
+    flex-direction: row;
+  }
+}
 .calculator .calculator-form .radio-label {
   width: 100%;
   justify-content: space-between;
@@ -1041,20 +1052,20 @@ section {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 40px;
+  gap: 2.5rem;
 }
 .sign-in-container .sign-in-logo {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   filter: brightness(0);
 }
 .sign-in-container .back-link {
   display: flex;
   align-items: center;
-  gap: 5px;
-  font-size: 12px;
+  gap: 0.3125rem;
+  font-size: 0.75rem;
   transition: color 0.13s;
 }
 .sign-in-container .back-link:hover {
@@ -1065,29 +1076,37 @@ section {
 }
 .sign-in-container .back-link .md {
   transition: color 0.13s;
-  transform: translateY(1px);
+  transform: translateY(0.0625rem);
 }
 
 .sign-in-form {
   display: flex;
   align-items: center;
-  gap: 20rem;
+  width: 100%;
+  max-width: 43.75rem;
+  justify-content: space-between;
+}
+@media (max-width: 768px) {
+  .sign-in-form {
+    flex-direction: column-reverse;
+    gap: 50px;
+  }
 }
 .sign-in-form .form-content {
-  width: 300px;
+  width: 18.75rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 60px;
+  gap: 3.75rem;
 }
 .sign-in-form .form-content .input {
   width: 100%;
-  padding: 8px 15px;
+  padding: 0.5rem 0.9375rem;
   border: none;
   background: none;
-  border-bottom: 1px solid rgba(18, 19, 18, 0.3882352941);
+  border-bottom: 0.0625rem solid rgba(18, 19, 18, 0.3882352941);
   transition: border-color 0.13s;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
   color: #121312;
 }
@@ -1100,23 +1119,23 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
-  font-size: 14px;
+  gap: 0.3125rem;
+  font-size: 0.875rem;
   font-weight: 500;
 }
 .sign-in-form .sign-in-btn {
   width: 100%;
   background-color: #ffcc00;
   border: none;
-  padding: 10px 15px;
-  border-radius: 10px;
+  padding: 0.625rem 0.9375rem;
+  border-radius: 0.625rem;
   color: #131213;
   cursor: pointer;
   transition: background-color 0.13s;
 }
 .sign-in-form .sign-in-btn:hover {
   background-color: transparent;
-  outline: 1px solid #ffcc00;
+  outline: 0.0625rem solid #ffcc00;
 }
 .sign-in-form .sign-in-menu {
   width: 100%;
@@ -1126,7 +1145,7 @@ section {
 }
 .sign-in-form .sign-in-menu .sign-up-link,
 .sign-in-form .sign-in-menu .forgot-link {
-  font-size: 13px;
+  font-size: 0.8125rem;
   transition: color 0.13s;
   color: rgba(18, 18, 18, 0.5);
 }
@@ -1136,7 +1155,29 @@ section {
 }
 
 .cabinet {
-  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media (max-width: 375px) {
+  .cabinet .wrapper {
+    padding: 0 2px;
+  }
+}
+.cabinet .row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.cabinet .bank {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.cabinet .bank__money {
+  font-weight: 600;
+}
+.cabinet .bank__currency {
+  font-style: italic;
 }
 .cabinet .wrapper {
   flex-direction: column;
@@ -1145,16 +1186,16 @@ section {
 .cabinet .profile {
   display: flex;
   align-items: center;
-  gap: 5px;
+  gap: 0.3125rem;
   align-self: end;
 }
 .cabinet .profile .avatar .md {
-  width: 50px;
-  height: 50px;
+  width: 3.125rem;
+  height: 3.125rem;
 }
 .cabinet .profile .avatar .avatar-img {
-  width: 40px;
-  height: 40px;
+  width: 2.5rem;
+  height: 2.5rem;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -1164,24 +1205,24 @@ section {
 .cabinet .profile .name {
   font-weight: 500;
   color: #131213;
-  font-size: 12px;
+  font-size: 0.75rem;
   text-transform: uppercase;
   text-decoration: underline;
 }
 .cabinet .menu {
-  margin: 30px 0px;
+  margin: 1.875rem 0rem;
   width: 100%;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   flex-wrap: wrap;
 }
 .cabinet .menu__btn {
-  padding: 6px 15px;
+  padding: 0.75rem 0.9375rem;
   background-color: #ffcc00;
-  border-radius: 10px;
+  border-radius: 0.3125rem;
   font-weight: 500;
-  font-size: 13px;
+  font-size: 0.8125rem;
   line-height: 100%;
   cursor: pointer;
   transition: color 0.13s, background-color 0.13s, transform 0.13s;
@@ -1191,7 +1232,7 @@ section {
   color: #fff;
 }
 .cabinet .menu__btn:active {
-  transform: translateY(2px);
+  transform: translateY(0.125rem);
 }
 .cabinet .table {
   width: 100%;
@@ -1207,24 +1248,40 @@ section {
 .cabinet .table .thead {
   width: 100%;
   background-color: rgba(255, 204, 0, 0.3);
-  border-bottom: 4px solid #131213;
+  border-bottom: 0.25rem solid #131213;
 }
 .cabinet .table .td {
-  width: 128px;
-  height: 40px;
+  width: 100vw;
+  max-width: 20%;
+  height: 2.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
-  outline: 1px solid #ffcc00;
+  outline: 0.0625rem solid #ffcc00;
   text-align: center;
+}
+@media (max-width: 320px) {
+  .cabinet .table .td {
+    line-height: 65%;
+  }
 }
 .cabinet .table .td:hover {
   background-color: rgba(255, 204, 0, 0.2);
 }
 .cabinet .table .td .show-more-link {
   text-decoration: underline;
+}
+
+.mobile-hidden {
+  display: none !important;
+}
+
+@media (max-width: 389px) {
+  .cabinet-header .company-name {
+    display: none;
+  }
 }
 
 .loader {

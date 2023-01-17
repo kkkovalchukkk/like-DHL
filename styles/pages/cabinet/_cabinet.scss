@@ -1,5 +1,28 @@
 .cabinet {
-  margin-top: 40px;
+  margin-top: 2.5rem;
+
+  .wrapper {
+    @media (max-width: 375px) {
+      padding: 0 2px;
+    }
+  }
+  .row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .bank {
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    &__money {
+      font-weight: 600;
+    }
+    &__currency {
+      font-style: italic;
+    }
+  }
   .wrapper {
     flex-direction: column;
     align-items: flex-start;
@@ -7,16 +30,16 @@
   .profile {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 0.3125rem;
     align-self: end;
     .avatar {
       .md {
-        width: 50px;
-        height: 50px;
+        width: 3.125rem;
+        height: 3.125rem;
       }
       .avatar-img {
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
         object-fit: cover;
         object-position: center;
         border-radius: 50%;
@@ -25,25 +48,25 @@
     .name {
       font-weight: 500;
       color: #131213;
-      font-size: 12px;
+      font-size: 0.75rem;
       text-transform: uppercase;
       text-decoration: underline;
     }
   }
   .menu {
-    margin: 30px 0px;
+    margin: 1.875rem 0rem;
     width: 100%;
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 0.625rem;
     flex-wrap: wrap;
 
     &__btn {
-      padding: 6px 15px;
+      padding: 0.75rem 0.9375rem;
       background-color: $yellow;
-      border-radius: 10px;
+      border-radius: 0.3125rem;
       font-weight: 500;
-      font-size: 13px;
+      font-size: 0.8125rem;
       line-height: 100%;
       cursor: pointer;
       transition: color 0.13s, background-color 0.13s, transform 0.13s;
@@ -52,7 +75,7 @@
         color: #fff;
       }
       &:active {
-        transform: translateY(2px);
+        transform: translateY(0.125rem);
       }
     }
   }
@@ -69,25 +92,41 @@
     .thead {
       width: 100%;
       background-color: rgba($color: $yellow, $alpha: 0.3);
-      border-bottom: 4px solid #131213;
+      border-bottom: 0.25rem solid #131213;
     }
 
     .td {
-      width: 128px;
-      height: 40px;
+      width: 100vw;
+      max-width: 20%;
+      height: 2.5rem;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 12px;
+      font-size: 0.75rem;
       font-weight: 500;
-      outline: 1px solid $yellow;
+      outline: 0.0625rem solid $yellow;
       text-align: center;
+      @media (max-width: 320px) {
+        line-height: 65%;
+      }
       &:hover {
         background-color: rgba($color: $yellow, $alpha: 0.2);
       }
       .show-more-link {
         text-decoration: underline;
       }
+    }
+  }
+}
+
+.mobile-hidden {
+  display: none !important;
+}
+
+.cabinet-header {
+  .company-name {
+    @media (max-width: 389px) {
+      display: none;
     }
   }
 }

@@ -38,38 +38,34 @@
               Выйти
             </a>
           </nav>
-          <form class="search-form">
-            <label class="search-label" for="search-input">
-              <div class="search-icon">
-                <ion-icon name="search-outline"></ion-icon>
-              </div>
-              <input type="checkbox" class="search-toggler" />
-              <input
-                type="text"
-                placeholder="Поиск по сайту"
-                id="search-input"
-                class="search-input" />
-            </label>
-          </form>
         </div>
       </div>
     </header>
     <main class="main">
       <section class="cabinet">
         <div class="wrapper">
-          <div class="profile">
-            <div class="avatar">
-              <img
-                src="https://www.laserskinsurgery.com/wp-content/uploads/2020/10/male-plastic-surgery-new-york.jpg"
-                alt="Avatar"
-                class="avatar-img" />
+          <div class="row">
+            <div class="bank">
+              Текущий остаток:
+              <div class="bank__money">150000</div>
+              <div class="bank__currency">руб.</div>
             </div>
-            <div class="name">sp1@smetanin.biz</div>
+            <div class="profile">
+              <div class="avatar">
+                <img
+                  src="https://www.laserskinsurgery.com/wp-content/uploads/2020/10/male-plastic-surgery-new-york.jpg"
+                  alt="Avatar"
+                  class="avatar-img" />
+              </div>
+              <div class="name">sp1@smetanin.biz</div>
+            </div>
           </div>
           <div class="menu">
-            <a href="#" class="menu__btn">Отчёт по заказам </a>
             <a href="#" class="menu__btn">Новый заказ </a>
+            <a href="#" class="menu__btn">Партнёры </a>
+            <a href="#" class="menu__btn">Отчёт по заказам </a>
             <a href="#" class="menu__btn">Акт сверки </a>
+            <a href="#" class="menu__btn">Управление пользователями</a>
             <a href="#" class="menu__btn">Настройки </a>
             <a href="#" class="menu__btn">Выход </a>
           </div>
@@ -78,12 +74,13 @@
               <div class="row">
                 <div class="td tdh">Статус</div>
                 <div class="td tdh">Номер</div>
-                <div class="td tdh">Отправитель</div>
-                <div class="td tdh">Город отправки</div>
-                <div class="td tdh">Получатель</div>
-                <div class="td tdh">Город получения</div>
+                <div class="td tdh mobile-hidden">Отправитель</div>
+                <div class="td tdh mobile-hidden">Город отправки</div>
+                <div class="td tdh mobile-hidden">Получатель</div>
+                <div class="td tdh mobile-hidden">Город получения</div>
                 <div class="td tdh">Сумма</div>
                 <div class="td tdh">Текущее местоположение</div>
+                <div class="td tdh mobile-hidden">Пользователь</div>
                 <div class="td tdh"></div>
               </div>
             </div>
@@ -91,12 +88,13 @@
               <div class="row">
                 <div class="td tdh">Новый</div>
                 <div class="td tdh">80</div>
-                <div class="td tdh">Иван Петров</div>
-                <div class="td tdh">Екатеринбург</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Бостон</div>
+                <div class="td tdh mobile-hidden">Иван Петров</div>
+                <div class="td tdh mobile-hidden">Екатеринбург</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Бостон</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки</div>
+                <div class="td tdh mobile-hidden">Василий</div>
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
@@ -104,12 +102,14 @@
               <div class="row">
                 <div class="td tdh">Новый</div>
                 <div class="td tdh">82</div>
-                <div class="td tdh">Вася Пупкин</div>
-                <div class="td tdh">Уфа</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Ричмонд</div>
+                <div class="td tdh mobile-hidden">Вася Пупкин</div>
+                <div class="td tdh mobile-hidden">Уфа</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Ричмонд</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки</div>
+                <div class="td tdh mobile-hidden">Василий</div>
+
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
@@ -117,12 +117,14 @@
               <div class="row">
                 <div class="td tdh">Новый</div>
                 <div class="td tdh">83</div>
-                <div class="td tdh">Иван Петров</div>
-                <div class="td tdh">Лос Анджелес</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Ричмонд</div>
+                <div class="td tdh mobile-hidden">Иван Петров</div>
+                <div class="td tdh mobile-hidden">Лос Анджелес</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Ричмонд</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки</div>
+                <div class="td tdh mobile-hidden">Василий</div>
+
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
@@ -130,12 +132,14 @@
               <div class="row">
                 <div class="td tdh">Доставлен</div>
                 <div class="td tdh">84</div>
-                <div class="td tdh">Иннокентий Галгамыжкий</div>
-                <div class="td tdh">Уфа</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Ричмонд</div>
+                <div class="td tdh mobile-hidden">Иннокентий Галгамыжкий</div>
+                <div class="td tdh mobile-hidden">Уфа</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Ричмонд</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки, речной порт</div>
+                <div class="td tdh mobile-hidden">Василий</div>
+
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
@@ -143,12 +147,14 @@
               <div class="row">
                 <div class="td tdh">Новый</div>
                 <div class="td tdh">80</div>
-                <div class="td tdh">Иван Петров</div>
-                <div class="td tdh">Екатеринбург</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Бостон</div>
+                <div class="td tdh mobile-hidden">Иван Петров</div>
+                <div class="td tdh mobile-hidden">Екатеринбург</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Бостон</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки</div>
+                <div class="td tdh mobile-hidden">Василий</div>
+
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
@@ -156,12 +162,14 @@
               <div class="row">
                 <div class="td tdh">Новый</div>
                 <div class="td tdh">82</div>
-                <div class="td tdh">Вася Пупкин</div>
-                <div class="td tdh">Уфа</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Ричмонд</div>
+                <div class="td tdh mobile-hidden">Вася Пупкин</div>
+                <div class="td tdh mobile-hidden">Уфа</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Ричмонд</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки</div>
+                <div class="td tdh mobile-hidden">Василий</div>
+
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
@@ -169,12 +177,14 @@
               <div class="row">
                 <div class="td tdh">Новый</div>
                 <div class="td tdh">83</div>
-                <div class="td tdh">Иван Петров</div>
-                <div class="td tdh">Лос Анджелес</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Ричмонд</div>
+                <div class="td tdh mobile-hidden">Иван Петров</div>
+                <div class="td tdh mobile-hidden">Лос Анджелес</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Ричмонд</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки</div>
+                <div class="td tdh mobile-hidden">Василий</div>
+
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
@@ -182,12 +192,14 @@
               <div class="row">
                 <div class="td tdh">Доставлен</div>
                 <div class="td tdh">84</div>
-                <div class="td tdh">Иннокентий Галгамыжкий</div>
-                <div class="td tdh">Уфа</div>
-                <div class="td tdh">Jack Daniels</div>
-                <div class="td tdh">Ричмонд</div>
+                <div class="td tdh mobile-hidden">Иннокентий Галгамыжкий</div>
+                <div class="td tdh mobile-hidden">Уфа</div>
+                <div class="td tdh mobile-hidden">Jack Daniels</div>
+                <div class="td tdh mobile-hidden">Ричмонд</div>
                 <div class="td tdh">15260,28</div>
                 <div class="td tdh">США, Ричмонд, склад погрузки, речной порт</div>
+                <div class="td tdh mobile-hidden">Василий</div>
+
                 <div class="td tdh">
                   <a href="#" class="show-more-link"> Подробнее </a>
                 </div>
