@@ -682,6 +682,12 @@ section {
           backdrop-filter: blur(2.5rem);
   left: 0;
 }
+@media (max-width: 768px) {
+  .results-list .result-item .popup-question {
+    left: -103px;
+    top: -31px;
+  }
+}
 .results-list .result-item .result-content {
   display: flex;
   align-items: center;
@@ -724,6 +730,11 @@ section {
   background-color: #fff;
   cursor: pointer;
   text-align: center;
+}
+@media (max-width: 465px) {
+  .results-list .result-item .results-btn {
+    padding: 0.8rem 0.9rem;
+  }
 }
 .results-list .result-item .results-btn:hover {
   color: #121212;
@@ -1226,6 +1237,11 @@ section {
   display: inline-block;
   -webkit-animation: rotation 1s linear infinite;
           animation: rotation 1s linear infinite;
+}
+@media (max-width: 1024px) {
+  .loader {
+    margin: 0 auto;
+  }
 }
 
 @-webkit-keyframes rotation {

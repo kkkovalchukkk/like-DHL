@@ -379,6 +379,10 @@ section {
         font-size: 0.75rem;
         backdrop-filter: blur(2.5rem);
         left: 0;
+        @media (max-width: 768px) {
+          left: -103px;
+          top: -31px;
+        }
       }
       .result-content {
         display: flex;
@@ -423,6 +427,9 @@ section {
         background-color: #fff;
         cursor: pointer;
         text-align: center;
+        @media (max-width: 465px) {
+          padding: 0.8rem 0.9rem;
+        }
         &:hover {
           color: #121212;
           background-color: $yellow;

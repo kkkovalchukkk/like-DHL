@@ -7,6 +7,9 @@
   border-radius: 50%;
   display: inline-block;
   animation: rotation 1s linear infinite;
+  @media (max-width: 1024px) {
+    margin: 0 auto;
+  }
 }
 
 @keyframes rotation {
