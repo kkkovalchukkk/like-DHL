@@ -1,0 +1,151 @@
+.users {
+  margin-top: 3rem;
+  .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 2.5rem;
+    // @media (max-width: 768px) {
+    //   gap: 1rem;
+    // }
+  }
+
+  .form {
+    max-height: 17.875rem;
+    display: flex;
+    margin-bottom: 3rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 0.9375rem;
+    background-color: $yellow;
+    border: 0.0625rem solid $yellow;
+    border-radius: 0.625rem;
+    &__btn {
+      width: 100%;
+      padding: 0.625rem 0rem;
+      border: none;
+      font-size: 0.75rem;
+      font-weight: 500;
+      background-color: #131213;
+      color: #fff;
+      border-radius: 0.3125rem;
+      cursor: pointer;
+      transition: color 0.13s, background-color 0.13s, outline 0.13s, transform 0.13s;
+      &:hover {
+        background-color: transparent;
+        outline: 0.0625rem solid #131213;
+        color: #121212;
+      }
+      &:active {
+        transform: translateY(0.125rem);
+      }
+    }
+    &__label {
+      display: flex;
+      flex-direction: column;
+      // align-items: center;
+      align-items: flex-start;
+      gap: 0.625rem;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    &__text-input {
+      border: none;
+      background: none;
+      outline: 0.0625rem solid #131213;
+      padding: 0.5rem 1.5625rem;
+      border-radius: 0.125rem;
+      transition: background-color 0.13s, color 0.13s;
+      font-size: 0.8125rem;
+      font-weight: 500;
+      padding-left: 0.3125rem;
+      &::placeholder {
+        font-size: 0.75rem;
+        color: #131313;
+      }
+      &:focus {
+        background-color: #131213;
+        color: $yellow;
+      }
+    }
+  }
+  &-list {
+    width: 80%;
+
+    display: flex;
+    flex-wrap: wrap;
+    // justify-content: space-between;
+    gap: 1.25rem;
+    @media (max-width: 768px) {
+      max-height: 350px;
+      overflow-y: scroll;
+      justify-content: space-evenly;
+    }
+    .user {
+      position: relative;
+      width: 10.375rem;
+      height: 10.375rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      border-radius: 1.25rem;
+      background-color: #131213;
+      &__avatar {
+        width: 4.375rem;
+        height: 4.375rem;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+      }
+      &__name {
+        font-size: 0.875rem;
+        font-weight: 500;
+        color: #fff;
+        margin-bottom: 0;
+        margin-top: 0.625rem;
+      }
+      &__who {
+        font-style: italic;
+        font-size: 0.625rem;
+        color: rgba($color: $yellow, $alpha: 0.5);
+      }
+      &__email {
+        font-style: italic;
+        font-size: 0.75rem;
+        margin: 0.5rem 0rem;
+        color: $yellow;
+      }
+      &__delete-btn {
+        width: 1.5625rem;
+        height: 1.5625rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        padding: 0;
+        right: 0.5rem;
+        top: 0.3125rem;
+        border: none;
+        background: none;
+        cursor: pointer;
+        transition: transform 0.13s;
+        &:active {
+          transform: translateY(0.125rem);
+        }
+        &:hover {
+          .md {
+            color: $yellow;
+          }
+        }
+        .md {
+          transition: color 0.13s;
+          width: 1.5625rem;
+          height: 1.5625rem;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

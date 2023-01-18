@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>FASTWWD | Логистика | Транспортировка</title>
+  </head>
+  <body>
+    <header class="header cabinet-header">
+      <div class="top-header">
+        <div class="wrapper">
+          <a href="/" class="logo-link">
+            <img src="./assets/img/logo/logo.png" alt="FASTWWD" class="logo" />
+            <span class="company-name"> FASTWWD </span>
+            <!-- <img src="./assets/img/logo/Site_Logo/left_big.png" alt="" class="logo" /> -->
+          </a>
+
+          <nav class="th-nav">
+            <a href="#" class="th-nav__link">
+              <div class="home-icon">
+                <ion-icon name="home-outline"></ion-icon>
+              </div>
+              Главная
+            </a>
+            <a href="#" class="th-nav__link">
+              <div class="help-icon">
+                <ion-icon name="help-circle-outline"></ion-icon>
+              </div>
+              Помощь
+            </a>
+            <a href="/sign-in.html" class="th-nav__link">
+              <div class="enter-icon">
+                <ion-icon name="enter-outline"></ion-icon>
+              </div>
+              Выйти
+            </a>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="order">
+        <div class="wrapper">
+          <div class="order-logo">
+            <img src="./assets/img/logo/logo.png" alt="FASTWWD" class="order-img" />
+            <h2 class="subheading">FASTWWD</h2>
+          </div>
+          <h2 class="subheading">Создание заказа</h2>
+          <span class="order-text">Заполните оставшиеся поля</span>
+          <form class="order-form">
+            <div class="form-info">
+              <div class="price-info">
+                Цена:
+                <div class="price">123 000 руб.</div>
+              </div>
+              <div class="time-info">
+                Дней:
+                <div class="time">10-12</div>
+              </div>
+              <div class="where">В пункт выдачи</div>
+            </div>
+            <fieldset class="order-form__field">
+              <label>
+                Адрес отправителя
+                <input
+                  type="text"
+                  class="order-form__text-input"
+                  placeholder="Адрес отправителя"
+                  required />
+              </label>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <label>
+                ФИО Отправителя
+                <input
+                  required
+                  type="text"
+                  class="order-form__text-input"
+                  placeholder="ФИО Отправителя" />
+              </label>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <label>
+                Телефон отправителя
+                <input
+                  type="text"
+                  class="order-form__text-input"
+                  placeholder="Телефон отправителя в формате +7(917)0500070"
+                  required />
+              </label>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <h3 class="order-form__field-heading">Тип отправителя</h3>
+              <div class="radio-labels">
+                <label class="radio-label">
+                  Юр. лицо
+                  <input type="radio" name="type-from" value="юр. лицо" id="" checked />
+                </label>
+                <label class="radio-label">
+                  Физ. лицо
+                  <input type="radio" name="type-from" value="физ. лицо" id="" />
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <label>
+                Адрес получателя
+                <input
+                  type="text"
+                  class="order-form__text-input"
+                  placeholder="Адрес получателя"
+                  required />
+              </label>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <label>
+                ФИО получателя
+                <input
+                  type="text"
+                  class="order-form__text-input"
+                  placeholder="ФИО получателя"
+                  required />
+              </label>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <label>
+                Телефон получателя
+                <input
+                  required
+                  type="text"
+                  class="order-form__text-input"
+                  placeholder="Телефон получателя в формате +7(917)0500070" />
+              </label>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <h3 class="order-form__field-heading">Тип получателя</h3>
+              <div class="radio-labels">
+                <label class="radio-label">
+                  Юр. лицо
+                  <input type="radio" name="type-to" value="юр. лицо" id="" checked />
+                </label>
+                <label class="radio-label">
+                  Физ. лицо
+                  <input type="radio" name="type-to" value="физ. лицо" id="" />
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="order-form__field">
+              <label>
+                Описание груза
+                <textarea required name="" id="" placeholder="Описание груза"></textarea>
+              </label>
+            </fieldset>
+            <button type="submit" class="order-form__btn">Оформить</button>
+          </form>
+        </div>
+      </section>
+    </main>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  </body>
+</html>
